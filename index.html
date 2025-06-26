@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Muhamad Arif Asraf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <script src="java/js.js" defer></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: #0d0f18;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header, nav, footer {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1.glitch {
+      font-size: 2.2rem;
+      color: #5ddcff;
+      text-shadow: 0 0 5px #5ddcff, 0 0 10px #5ddcff;
+    }
+
+    .slogan {
+      font-size: 1rem;
+      color: #aaa;
+      margin-top: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    nav a {
+      color: #5ddcff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      border: 1px solid #5ddcff;
+      background-color: #1b1f33;
+    }
+
+    /* NEW CARD STYLE */
+    .card {
+      width: 350px;
+      height: 300px;
+      background-color: #fffffe;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.5s ease;
+    }
+
+    .card::before {
+      content: "";
+      width: 350px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom: 3px solid #fefefe;
+      background: linear-gradient(40deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+      transition: all 0.5s ease;
+    }
+
+    .card * {
+      z-index: 1;
+    }
+
+    .image {
+      width: 90px;
+      height: 90px;
+      background-color: #1468BF;
+      border-radius: 50%;
+      border: 4px solid #fefefe;
+      margin-top: 30px;
+      transition: all 0.5s ease;
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.5s ease;
+      text-align: center;
+    }
+
+    .card-info span {
+      font-weight: 600;
+      font-size: 24px;
+      color: #161A42;
+      margin-top: 15px;
+      line-height: 1.2;
+    }
+
+    .card-info p {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      padding: 0 20px;
+    }
+
+    .button {
+      text-decoration: none;
+      background-color: #1468BF;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 5px;
+      border: 1px solid white;
+      transition: all 0.5s ease;
+    }
+
+    .card:hover::before {
+      height: 300px;
+      border-bottom: none;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      transform: scale(0.95);
+    }
+
+    .card:hover .card-info {
+      transform: translateY(-25%);
+    }
+
+    .card:hover .image {
+      transform: scale(2) translate(-60%,-40%);
+    }
+
+    .button:hover {
+      background-color: #FF6844;
+      transform: scale(1.1);
+    }
+
+    footer p {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="glitch">Welcome to My World</h1>
+    <audio autoplay muted loop>
+  <source src="sound/background.mp3" type="audio/mpeg">
+</audio>
+    <p class="slogan">I'm Muhamad Arif Asraf — Let’s Explore!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skill.html">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="card">
+      <div class="image"></div>
+      <div class="card-info">
+        <span>Muhamad Arif Asraf</span>
+        <p>This is my personal portfolio built with HTML, CSS, and JS. Explore more about my journey below.</p>
+        <a class="button" href="about.html">Explore</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Muhamad Arif Asraf. All rights reserved.</p>
+  </footer>
+</body>
+</html>
